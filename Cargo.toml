@@ -1,0 +1,2 @@
+[workspace]
+members = ["smolhttp_types"]
