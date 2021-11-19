@@ -1,6 +1,7 @@
 use std::ops::Deref;
 
-pub mod writer;
+#[cfg(feature = "write")]
+pub mod write;
 
 impl From<String> for Method {
     fn from(s: String) -> Self {
