@@ -1,5 +1,6 @@
-use std::fmt;
 use std::ops::Deref;
+
+pub mod writer;
 
 impl From<String> for Method {
     fn from(s: String) -> Self {
@@ -94,10 +95,4 @@ pub struct Header {
 
     /// The value of the header. Maps to `field-value`.
     pub value: String,
-}
-
-impl fmt::Display for Header {
-    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
-        write!(f, "{}: {}", self.name, self.value)
-    }
 }

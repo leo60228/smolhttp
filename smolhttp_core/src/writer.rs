@@ -1,8 +1,14 @@
-use smolhttp_types::*;
+use crate::*;
 use std::fmt;
 
+impl fmt::Display for Header {
+    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
+        write!(f, "{}: {}", self.name, self.value)
+    }
+}
+
 mod sealed {
-    use smolhttp_types::*;
+    use crate::*;
     use std::fmt;
 
     pub trait Sealed {

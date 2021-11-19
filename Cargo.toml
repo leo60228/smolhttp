@@ -1,2 +1,2 @@
 [workspace]
-members = ["smolhttp_types", "smolhttp_writer"]
+members = ["smolhttp_core"]
